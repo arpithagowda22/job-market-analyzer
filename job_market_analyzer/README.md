@@ -114,7 +114,7 @@ Go to `http://localhost:8080`, find `job_market_pipeline` and enable it.
 ## Sample Output
 
 ```
-📊 Job Market Summary — 2024-01-15
+ Job Market Summary — 2024-01-15
 
 Top In-Demand Skills:
 1. Python (78% of Data Engineer roles)
