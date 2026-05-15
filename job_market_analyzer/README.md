@@ -50,27 +50,43 @@ job_market_analyzer/
 
 ---
 
+## ⚠️ Prerequisites
+
+Before running this project, you need the following accounts and credentials:
+
+| Requirement | Where to get it | Cost |
+|---|---|---|
+| **AWS Account** | [aws.amazon.com](https://aws.amazon.com) | Free tier available |
+| **AWS S3 Bucket** | AWS Console → S3 → Create Bucket | Free tier: 5GB |
+| **RapidAPI Key** | [rapidapi.com](https://rapidapi.com) → Search "JSearch" | Free tier: 200 requests/month |
+| **OpenAI API Key** | [platform.openai.com](https://platform.openai.com/api-keys) | ~$0.01 per run |
+| **Apache Airflow** | `pip install apache-airflow` | Free |
+| **Python 3.8+** | [python.org](https://python.org) | Free |
+
+> 💡 **Just want to explore the code?** No accounts needed — browse the source files directly on GitHub!
+
+---
+
 ## Setup & Installation
 
 ### 1. Clone the repo
 ```bash
-git clone  https://github.com/arpithagowda22/job-market-analyzer.git
+git clone https://github.com/arpitharaghu/job-market-analyzer.git
 cd job-market-analyzer
 ```
 
 ### 2. Install dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Set environment variables
+### 3. Set up environment variables
 ```bash
-export AWS_ACCESS_KEY_ID=your_key
-export AWS_SECRET_ACCESS_KEY=your_secret
-export AWS_S3_BUCKET=your_bucket_name
-export RAPIDAPI_KEY=your_rapidapi_key
-export OPENAI_API_KEY=your_openai_key
+# Copy the example env file
+cp .env.example .env
+
+# Open .env and fill in your actual API keys
+# ⚠️ Never commit your .env file to GitHub!
 ```
 
 ### 4. Initialize Airflow
@@ -114,7 +130,7 @@ Go to `http://localhost:8080`, find `job_market_pipeline` and enable it.
 ## Sample Output
 
 ```
- Job Market Summary — 2024-01-15
+📊 Job Market Summary — 2024-01-15
 
 Top In-Demand Skills:
 1. Python (78% of Data Engineer roles)
@@ -131,16 +147,14 @@ Fastest Growing: AI/ML Engineer (+23% WoW)
 ---
 
 ## Key Features
-- Medallion architecture (Bronze → Silver → Gold)
-- Fully orchestrated with Apache Airflow
-- LLM-based skill extraction and trend summarization
-- 98%+ pipeline uptime with retry logic and alerting
-- Modular, testable codebase
+- ✅ Medallion architecture (Bronze → Silver → Gold)
+- ✅ Fully orchestrated with Apache Airflow
+- ✅ LLM-based skill extraction and trend summarization
+- ✅ 98%+ pipeline uptime with retry logic and alerting
+- ✅ Modular, testable codebase
 
 ---
 
 ## Author
 **Arpitha Raghu** — Data Engineer  
-[LinkedIn](https://www.linkedin.com/in/arpitha2205/) 
-[GitHub](https://github.com/arpithagowda22)
-arpithagowda2205@gmail.com
+[LinkedIn](https://linkedin.com/in/arpitharaghu) | arpithagowda2205@gmail.com
